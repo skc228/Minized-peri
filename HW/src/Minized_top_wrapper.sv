@@ -149,4 +149,32 @@ module Minized_top_wrapper
     .pl_led_g_tri_o                 (pl_led_g_tri_o),
     .pl_led_r_tri_o                 (pl_led_r_tri_o)
   );
+
+  AXI_LITE_REG #(
+    .ADDR_WIDTH                     (32),
+    .DATA_WIDTH                     (32)
+  )
+  AXI_LITE_REG_i
+  (
+    .aclk                           (FCLK_CLK0),
+    .aresetn                        (FCLK_CLK0_RSTN),
+
+    .S_AXI_LITE_awaddr              (USER_M_AXI_LITE_awaddr),
+    .S_AXI_LITE_awvalid             (USER_M_AXI_LITE_awvalid),
+    .S_AXI_LITE_awready             (USER_M_AXI_LITE_awready),
+    .S_AXI_LITE_wdata               (USER_M_AXI_LITE_wdata),
+    .S_AXI_LITE_wstrb               (USER_M_AXI_LITE_wstrb),
+    .S_AXI_LITE_wvalid              (USER_M_AXI_LITE_wvalid),
+    .S_AXI_LITE_wready              (USER_M_AXI_LITE_wready),
+    .S_AXI_LITE_bresp               (USER_M_AXI_LITE_bresp),
+    .S_AXI_LITE_bvalid              (USER_M_AXI_LITE_bvalid),
+    .S_AXI_LITE_bready              (USER_M_AXI_LITE_bready),
+    .S_AXI_LITE_araddr              (USER_M_AXI_LITE_araddr),
+    .S_AXI_LITE_arvalid             (USER_M_AXI_LITE_arvalid),
+    .S_AXI_LITE_arready             (USER_M_AXI_LITE_arready),
+    .S_AXI_LITE_rdata               (USER_M_AXI_LITE_rdata),
+    .S_AXI_LITE_rresp               (USER_M_AXI_LITE_rresp),
+    .S_AXI_LITE_rvalid              (USER_M_AXI_LITE_rvalid),
+    .S_AXI_LITE_rready              (USER_M_AXI_LITE_rready) 
+  );
 endmodule
