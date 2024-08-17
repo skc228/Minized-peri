@@ -23,14 +23,6 @@ module Minized_top_wrapper
   FIXED_IO_ps_clk,
   FIXED_IO_ps_porb,
   FIXED_IO_ps_srstb,
-  UART_ctsn,
-  UART_dcdn,
-  UART_dsrn,
-  UART_dtrn,
-  UART_ri,
-  UART_rtsn,
-  UART_rxd,
-  UART_txd,
   pl_led_g_tri_o,
   pl_led_r_tri_o
 );
@@ -57,48 +49,32 @@ module Minized_top_wrapper
   inout                             FIXED_IO_ps_clk;
   inout                             FIXED_IO_ps_porb;
   inout                             FIXED_IO_ps_srstb;
-  input                             UART_ctsn;
-  input                             UART_dcdn;
-  input                             UART_dsrn;
-  output                            UART_dtrn;
-  input                             UART_ri;
-  output                            UART_rtsn;
-  input                             UART_rxd;
-  output                            UART_txd;
   output                            pl_led_g_tri_o;
   output                            pl_led_r_tri_o;
 
-  logic [14:0]                      DDR_addr;
-  logic [2:0]                       DDR_ba;
-  logic                             DDR_cas_n;
-  logic                             DDR_ck_n;
-  logic                             DDR_ck_p;
-  logic                             DDR_cke;
-  logic                             DDR_cs_n;
-  logic [1:0]                       DDR_dm;
-  logic [15:0]                      DDR_dq;
-  logic [1:0]                       DDR_dqs_n;
-  logic [1:0]                       DDR_dqs_p;
-  logic                             DDR_odt;
-  logic                             DDR_ras_n;
-  logic                             DDR_reset_n;
-  logic                             DDR_we_n;
-  logic                             FIXED_IO_ddr_vrn;
-  logic                             FIXED_IO_ddr_vrp;
-  logic [31:0]                      FIXED_IO_mio;
-  logic                             FIXED_IO_ps_clk;
-  logic                             FIXED_IO_ps_porb;
-  logic                             FIXED_IO_ps_srstb;
-  logic                             UART_ctsn;
-  logic                             UART_dcdn;
-  logic                             UART_dsrn;
-  logic                             UART_dtrn;
-  logic                             UART_ri;
-  logic                             UART_rtsn;
-  logic                             UART_rxd;
-  logic                             UART_txd;
-  logic                             pl_led_g_tri_o;
-  logic                             pl_led_r_tri_o;
+  wire  [14:0]                      DDR_addr;
+  wire  [2:0]                       DDR_ba;
+  wire                              DDR_cas_n;
+  wire                              DDR_ck_n;
+  wire                              DDR_ck_p;
+  wire                              DDR_cke;
+  wire                              DDR_cs_n;
+  wire  [1:0]                       DDR_dm;
+  wire  [15:0]                      DDR_dq;
+  wire  [1:0]                       DDR_dqs_n;
+  wire  [1:0]                       DDR_dqs_p;
+  wire                              DDR_odt;
+  wire                              DDR_ras_n;
+  wire                              DDR_reset_n;
+  wire                              DDR_we_n;
+  wire                              FIXED_IO_ddr_vrn;
+  wire                              FIXED_IO_ddr_vrp;
+  wire  [31:0]                      FIXED_IO_mio;
+  wire                              FIXED_IO_ps_clk;
+  wire                              FIXED_IO_ps_porb;
+  wire                              FIXED_IO_ps_srstb;
+  wire                              pl_led_g_tri_o;
+  wire                              pl_led_r_tri_o;
 
 // Internal Signals
   // Clock, Reset Signals
@@ -151,14 +127,6 @@ module Minized_top_wrapper
     .FIXED_IO_ps_clk                (FIXED_IO_ps_clk),
     .FIXED_IO_ps_porb               (FIXED_IO_ps_porb),
     .FIXED_IO_ps_srstb              (FIXED_IO_ps_srstb),
-    .UART_ctsn                      (UART_ctsn),
-    .UART_dcdn                      (UART_dcdn),
-    .UART_dsrn                      (UART_dsrn),
-    .UART_dtrn                      (UART_dtrn),
-    .UART_ri                        (UART_ri),
-    .UART_rtsn                      (UART_rtsn),
-    .UART_rxd                       (UART_rxd),
-    .UART_txd                       (UART_txd),
     .USER_M_AXI_LITE_araddr         (USER_M_AXI_LITE_araddr),
     .USER_M_AXI_LITE_arprot         (USER_M_AXI_LITE_arprot),
     .USER_M_AXI_LITE_arready        (USER_M_AXI_LITE_arready),
