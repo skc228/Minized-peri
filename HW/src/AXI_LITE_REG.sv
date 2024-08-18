@@ -1,5 +1,5 @@
 module AXI_LITE_REG #(
-  parameter ADDR_WIDTH = 4,    // Address width
+  parameter ADDR_WIDTH = 8,    // Address width
   parameter DATA_WIDTH = 32    // Data width
 )
 (
