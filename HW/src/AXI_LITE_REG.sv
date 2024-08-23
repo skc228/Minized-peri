@@ -103,7 +103,7 @@ module AXI_LITE_REG #(
     S_AXI_LITE_wready                 = 'd0;
     S_AXI_LITE_bresp                  = 'd0;
     S_AXI_LITE_bvalid                 = 'd0;
-    S_AXI_LITE_rdata                  = 16'hdead;
+    S_AXI_LITE_rdata                  = 'd0;
     S_AXI_LITE_rresp                  = 'd0;
     S_AXI_LITE_rvalid                 = 'd0;
     
