@@ -45,11 +45,11 @@ int main()
     // Step 0 : AXI BRAM Read, Write Data Check 
     xil_printf("Step 0 : AXI BRAM Data Check\n\r");
     read_data = *((int *) (XPAR_XBRAM_0_BASEADDR));
-    xil_printf("Before Write, AXI BRAM Read Data : %d\n\r", read_data);
+    xil_printf("Before Write, AXI BRAM Read Data : 0x%.8x\n\r", read_data);
     write_data = 0x01234567;
     *((int *) (XPAR_XBRAM_0_BASEADDR)) = write_data;
     read_data = *((int *) (XPAR_XBRAM_0_BASEADDR));
-    xil_printf("After Write, AXI BRAM Read Data : %d\n\r", read_data);
+    xil_printf("After Write, AXI BRAM Read Data : 0x%.8x\n\r", read_data);
     // Step 1 : AXI GPIO LED Control Check 
     xil_printf("Step 1 : AXI GPIO LED  Check\n\r");
     for (int i = 0 ; i < 10 ; i++){
